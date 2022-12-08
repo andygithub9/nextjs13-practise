@@ -23,7 +23,7 @@ const search = async (searchTerm: string) => {
     `https://serpapi.com/search.json?q=${searchTerm}&api_key=${process.env.API_KEY}`
   );
 
-  throw new Error("WHOOPS something broke"); // 開啟這行拋出錯誤後會將網頁導向此檔案同一層的 error.tsx , 只在 prod 環境會導向同一層的 error.tsx , 在 dev 環境會直接拋出錯誤並看到錯誤訊息
+  // throw new Error("WHOOPS something broke"); // 開啟這行拋出錯誤後會將網頁導向此檔案同一層的 error.tsx , 只在 prod 環境會導向同一層的 error.tsx , 在 dev 環境會直接拋出錯誤並看到錯誤訊息
   const data: SearchResult = await res.json();
   return data;
 };
